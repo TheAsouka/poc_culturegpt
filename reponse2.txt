@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la principale fonction du protocole HTTP ?",
+    "reponses": ["Envoyer des emails", "Transférer des fichiers", "Afficher des pages web", "Jouer à des jeux en ligne"],
+    "correct": "Afficher des pages web"
+  },
+  {
+    "id": 2,
+    "question": "Qu'est-ce que le terme 'URL' signifie en anglais ?",
+    "reponses": ["Uniform Resource Locator", "Universal Resource Locator", "User Remote Link", "User Registration Link"],
+    "correct": "Uniform Resource Locator"
+  },
+  {
+    "id": 3,
+    "question": "Quelle est l'unité de mesure de la vitesse de transmission de données sur Internet ?",
+    "reponses": ["Kilohertz", "Gigabyte", "Megabit", "Hertz"],
+    "correct": "Megabit"
+  },
+  {
+    "id": 4,
+    "question": "Quelle technologie permet de stocker des données sur Internet de manière permanente ?",
+    "reponses": ["Cloud computing", "Blockchain", "Wireless network", "Virtual reality"],
+    "correct": "Blockchain"
+  },
+  {
+    "id": 5,
+    "question": "Quel est le navigateur web le plus utilisé dans le monde ?",
+    "reponses": ["Google Chrome", "Mozilla Firefox", "Internet Explorer", "Safari"],
+    "correct": "Google Chrome"
+  }]
