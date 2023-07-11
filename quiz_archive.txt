@@ -1,0 +1,155 @@
+[{
+  "question": "Quel événement marque le début de la Révolution française en 1789 ?",
+  "reponses": ["La prise de la Bastille", "La bataille de Waterloo", "La guerre de Cent Ans", "La chute de l'Empire romain"],
+  "correct": "La prise de la Bastille"
+},
+{
+  "question": "Quel roi de France a été exécuté lors de la Révolution française en 1793 ?",
+  "reponses": ["Louis XIII", "Louis XIV", "Louis XVI", "Louis XVIII"],
+  "correct": "Louis XVI"
+},
+{
+  "question": "Quel événement marque la fin de la Seconde Guerre mondiale en Europe en 1945 ?",
+  "reponses": ["Le Jour J", "La chute du mur de Berlin", "L'attaque de Pearl Harbor", "La capitulation de l'Allemagne nazie"],
+  "correct": "La capitulation de l'Allemagne nazie"
+},
+{
+  "question": "Qui a découvert l'Amérique en 1492 ?",
+  "reponses": ["Christophe Colomb", "Vasco de Gama", "Marco Polo", "Ferdinand Magellan"],
+  "correct": "Christophe Colomb"
+},
+{
+  "question": "Quel événement marque la fin de la guerre froide en 1989 ?",
+  "reponses": ["La création de l'Union européenne", "La guerre du Golfe", "La réunification de l'Allemagne", "La chute du mur de Berlin"],
+  "correct": "La chute du mur de Berlin"
+}]
+[
+  {
+    "question": "Quelle est la principale fonction du protocole HTTP ?",
+    "reponses": ["Envoyer des emails", "Transférer des fichiers", "Afficher des pages web", "Jouer à des jeux en ligne"],
+    "correct": "Afficher des pages web"
+  },
+  {
+    "question": "Qu'est-ce que le terme 'URL' signifie en anglais ?",
+    "reponses": ["Uniform Resource Locator", "Universal Resource Locator", "User Remote Link", "User Registration Link"],
+    "correct": "Uniform Resource Locator"
+  },
+  {
+    "question": "Quelle est l'unité de mesure de la vitesse de transmission de données sur Internet ?",
+    "reponses": ["Kilohertz", "Gigabyte", "Megabit", "Hertz"],
+    "correct": "Megabit"
+  },
+  {
+    "question": "Quelle technologie permet de stocker des données sur Internet de manière permanente ?",
+    "reponses": ["Cloud computing", "Blockchain", "Wireless network", "Virtual reality"],
+    "correct": "Blockchain"
+  },
+  {
+    "question": "Quel est le navigateur web le plus utilisé dans le monde ?",
+    "reponses": ["Google Chrome", "Mozilla Firefox", "Internet Explorer", "Safari"],
+    "correct": "Google Chrome"
+  }]
+[
+    {
+        "question": "Quelle est la capitale de l'Allemagne ?",
+        "reponses": ["Berlin", "Munich", "Hambourg", "Francfort"],
+        "correct": "Berlin"
+    },
+    {
+        "question": "Quelle est la plus grande île du monde ?",
+        "reponses": ["Groenland", "Australie", "Madagascar", "Japon"],
+        "correct": "Groenland"
+    },
+    {
+        "question": "Dans quel pays se trouve le mont Everest ?",
+        "reponses": ["Népal", "Tibet", "Inde", "Chine"],
+        "correct": "Népal"
+    },
+    {
+        "question": "Quel est le plus grand désert du monde ?",
+        "reponses": ["Sahara", "Antarctique", "Gobi", "Kalimantan"],
+        "correct": "Antarctique"
+    },
+    {
+        "question": "Quel pays est séparé de l'Espagne par le détroit de Gibraltar ?",
+        "reponses": ["Maroc", "Algérie", "Tunisie", "Égypte"],
+        "correct": "Maroc"
+    }
+]
+[{
+  "question": "Quel est le nom de l'unité de mesure de la pression atmosphérique ?",
+  "reponses": ["Bar", "Pascal", "Volt", "Newton"],
+  "correct": "Pascal"
+},
+{
+  "question": "Quelle est la formule chimique de l'eau ?",
+  "reponses": ["H2O", "CO2", "NaCl", "CH4"],
+  "correct": "H2O"
+},
+{
+  "question": "Quel est le premier métal découvert par l'homme ?",
+  "reponses": ["Or", "Cuivre", "Fer", "Argent"],
+  "correct": "Cuivre"
+},
+{
+  "question": "Quelle est la planète la plus proche du Soleil ?",
+  "reponses": ["Vénus", "Terre", "Mercure", "Mars"],
+  "correct": "Mercure"
+},
+{
+  "question": "Quel est le nombre de chromosomes dans une cellule humaine ?",
+  "reponses": ["23", "46", "92", "64"],
+  "correct": "46"
+}]
+[ 
+  {
+    "question": "Quelle était la première application de messagerie instantanée créée sur Internet ?",
+    "reponses": [
+      "Skype",
+      "MSN Messenger",
+      "ICQ",
+      "WhatsApp"
+    ],
+    "correct": "ICQ"
+  },
+  {
+    "question": "Qui est considéré comme le créateur du World Wide Web ?",
+    "reponses": [
+      "Tim Berners-Lee",
+      "Bill Gates",
+      "Mark Zuckerberg",
+      "Steve Jobs"
+    ],
+    "correct": "Tim Berners-Lee"
+  },
+  {
+    "question": "Qu'est-ce qu'un DNS ?",
+    "reponses": [
+      "Un protocole de transfert de fichiers",
+      "Un système d'exploitation",
+      "Un serveur de noms de domaine",
+      "Un logiciel antivirus"
+    ],
+    "correct": "Un serveur de noms de domaine"
+  },
+  {
+    "question": "Quelle est la signification de l'acronyme HTML ?",
+    "reponses": [
+      "HyperText Markup Language",
+      "HyperText Modeling Language",
+      "HyperText Meta Language",
+      "HyperText Multimedia Language"
+    ],
+    "correct": "HyperText Markup Language"
+  },
+  {
+    "question": "Quelle est la définition du terme 'phishing' ?",
+    "reponses": [
+      "Une pratique utilisée pour voler des informations confidentielles",
+      "Le blocage de l'accès à un site web",
+      "L'envoi massif de courrier électronique non sollicité",
+      "La diffusion intentionnelle de virus informatiques"
+    ],
+    "correct": "Une pratique utilisée pour voler des informations confidentielles"
+   }
+]

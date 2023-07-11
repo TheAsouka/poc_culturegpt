@@ -7,45 +7,56 @@ import openai, os, json
 from dotenv import load_dotenv
 
 load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
-def write_AI_response(response):
-    with open("reponse2.txt", "w+") as f:
-        f.write(response)
+def archive_quiz(response):
+    with open("quiz_archive.txt", "a") as f:
+        f.write(response + "\n")
 
 
-def txt_to_dict():
-    with open("reponse2.txt", "r") as f:
-        data = json.load(f)
+def response_to_dict(response):
+    data = json.loads(response)
     return data
 
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.title("CultureGPT")
 
 # Sélection du thème du quiz
 theme = st.selectbox(
-    "Sélectionnez le thème du quiz:",
-    ["Histoire", "Géographie", "Science", "Art", "Technologie", "Internet"],
+    "**Sélectionnez le thème du quiz:**",
+    [
+        "Histoire",
+        "Géographie",
+        "Science",
+        "Art",
+        "Technologie",
+        "Internet",
+        "France",
+        "Culture populaire",
+    ],
 )
 difficulty = st.select_slider(
-    "Sélectionnez la difficulté:", ["Facile", "Moyen", "Difficile"]
+    "**Sélectionnez la difficulté:**", ["Facile", "Moyen", "Difficile"]
 )
 
+# Context pour le modele
 system_msg = """Tu es un assistant permettant de créer des tests de culture générale dans un format de QCM sur différents thèmes et dans différentes diffcultés.
 Tu retournes les questions et réponses en JSON comme ci :
-[{id : 1,question : "QUESTION1",reponses : ["reponse1","reponse2","reponse3","reponse4"],correct : "reponse2"}],[{id : 2,question : "QUESTION2",reponses : ["reponse1","reponse2","reponse3","reponse4"],correct : "reponse4"}],..."""
+[{question : "QUESTION1",reponses : ["reponse1","reponse2","reponse3","reponse4"],correct : "reponse2"}],[{question : "QUESTION2",reponses : ["reponse1","reponse2","reponse3","reponse4"],correct : "reponse4"}],..."""
+# Prompt de l'utilisateur
 user_msg = f"Créer un test de culture générale de 5 questions sur le thème \"{theme}\" de niveau {difficulty.lower()}.Ne répond qu'avec le JSON rien d'autre."
 
+# Evite l'erreur 'data' not defined
+# Gestion d'erreur à améliorer
+data = []
 
-# Génération de la question
-if st.button("Générer le quizz"):
+# Génération du quiz
+st.warning("Attention ça coute des sous (mais pas beaucoup).")
+if st.button("Générer le quiz"):
     # Attention à utiliser ChatCompletion avec les bon paramètres (model&messages) pour utiliser GPT3.5
     # Utilisation de Completion avec des modèle GPT3 requiert différents paramètres (engine&prompt).
-
-    """
-    quizz = openai.ChatCompletion.create(
+    completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": system_msg},
@@ -54,19 +65,49 @@ if st.button("Générer le quizz"):
         temperature=1,
         max_tokens=600,
     )
-    print(quizz)
-    response = quizz.choices[0].message.content.strip()
-    # write_AI_response(response)"""
+    print("-" * 20)
+    print(completion.id)
+    print(completion.model)
+    print(completion.usage)
+    print("-" * 20)
 
-    data = txt_to_dict()
-    st.session_state.quizz = data
+    response = completion.choices[0].message.content.strip()
+
+    archive_quiz(response)
+    data = response_to_dict(response)
+
+# Affichage des questions et choix dans un formulaire
+if len(data) != 0:
+    st.session_state.quiz = data
+    st.subheader(f"Quiz {theme} - {difficulty}")
     # Besoin de save les réponses de l'user dans le session_state
+    # Fais automatiquement via l'argument key du radio (widget)
     with st.form("my_form"):
-        score = 0
+        i = 0
         for elements in data:
-            user_rep = st.radio(f'**{elements["question"]}**', elements["reponses"])
-            st.session_state.rep = user_rep
+            user_rep = st.radio(
+                f'**{elements["question"]}**',
+                elements["reponses"],
+                key="rep" + str(i),
+            )
+            i += 1
         submitted = st.form_submit_button("Confirmer")
-        if submitted:
-            st.success(str(score))
-    print(st.session_state)
+
+
+if "FormSubmitter:my_form-Confirmer" not in st.session_state:
+    st.session_state["FormSubmitter:my_form-Confirmer"] = False
+
+
+if st.session_state["FormSubmitter:my_form-Confirmer"] is True:
+    score = 0
+    st.subheader("Voici les réponses :")
+    for y in range(0, 5):
+        question = st.session_state["quiz"][y]["question"]
+        correct_answer = st.session_state["quiz"][y]["correct"]
+        user_rep = st.session_state["rep" + str(y)]
+        if user_rep == correct_answer:
+            score += 1
+
+        st.write(f"**{question}**")
+        st.write(correct_answer)
+    st.success(f"Votre score est de {score}/5 bonnes réponses !")
