@@ -20,9 +20,26 @@ def response_to_dict(response):
     return data
 
 
+# Initialisation session_state
+def init_session_state():
+    if "FormSubmitter:my_form-Confirmer" not in st.session_state:
+        st.session_state["FormSubmitter:my_form-Confirmer"] = False
+
+    if "NbrQuiz" not in st.session_state:
+        st.session_state["NbrQuiz"] = 0
+
+    if "TotalScore" not in st.session_state:
+        st.session_state["TotalScore"] = 0
+
+
+init_session_state()
+
+
+# Création front
 st.title("CultureGPT")
 
-# Sélection du thème du quiz
+
+# Sélection thème et difficulté du quiz
 theme = st.selectbox(
     "**Sélectionnez le thème du quiz:**",
     [
@@ -47,6 +64,18 @@ Tu retournes les questions et réponses en JSON comme ci :
 # Prompt de l'utilisateur
 user_msg = f"Créer un test de culture générale de 5 questions sur le thème \"{theme}\" de niveau {difficulty.lower()}.Ne répond qu'avec le JSON rien d'autre."
 
+
+# Création de la sidebar
+with st.sidebar:
+    side_nbrqquiz = st.write("Nombre de quiz effectués :", st.session_state["NbrQuiz"])
+    side_totalscore = st.write(
+        "Score total :",
+        st.session_state["TotalScore"],
+        "/",
+        st.session_state["NbrQuiz"] * 5,
+    )
+
+
 # Evite l'erreur 'data' not defined
 # Gestion d'erreur à améliorer
 data = []
@@ -66,8 +95,8 @@ if st.button("Générer le quiz"):
         max_tokens=600,
     )
     print("-" * 20)
-    print(completion.id)
-    print(completion.model)
+    print("id :", completion.id)
+    print("model :", completion.model)
     print(completion.usage)
     print("-" * 20)
 
@@ -92,10 +121,7 @@ if len(data) != 0:
             )
             i += 1
         submitted = st.form_submit_button("Confirmer")
-
-
-if "FormSubmitter:my_form-Confirmer" not in st.session_state:
-    st.session_state["FormSubmitter:my_form-Confirmer"] = False
+        # "FormSubmitter:my_form-Confirmer" est automatiquement créer dans session_state
 
 
 if st.session_state["FormSubmitter:my_form-Confirmer"] is True:
@@ -111,3 +137,6 @@ if st.session_state["FormSubmitter:my_form-Confirmer"] is True:
         st.write(f"**{question}**")
         st.write(correct_answer)
     st.success(f"Votre score est de {score}/5 bonnes réponses !")
+    st.session_state["TotalScore"] += score
+    st.session_state["NbrQuiz"] += 1
+    st.button("OK")

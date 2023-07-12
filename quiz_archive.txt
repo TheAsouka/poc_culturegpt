@@ -153,3 +153,72 @@
     "correct": "Une pratique utilisée pour voler des informations confidentielles"
    }
 ]
+[{"question": "Quel est le nom du célèbre sorcier créé par J.K. Rowling ?", "reponses": ["Harry Potter", "Ron Weasley", "Hermione Granger", "Voldemort"], "correct": "Harry Potter"}, {"question": "Dans quelle ville se déroule le film 'La La Land' ?", "reponses": ["Los Angeles", "New York", "Paris", "Londres"], "correct": "Los Angeles"}, {"question": "Quel est le nom du groupe de musique coréen qui a connu un succès planétaire avec le titre 'Gangnam Style' ?", "reponses": ["BTS", "Blackpink", "Psy", "EXO"], "correct": "Psy"}, {"question": "Quel est le nom du vaisseau spatial dans la saga 'Star Wars' ?", "reponses": ["Millennium Falcon", "Death Star", "X-Wing", "TIE Fighter"], "correct": "Millennium Falcon"}, {"question": "Quel est le nom du réalisateur du film 'Inception' ?", "reponses": ["Christopher Nolan", "Martin Scorsese", "Quentin Tarantino", "Steven Spielberg"], "correct": "Christopher Nolan"}]
+[{"question": "Quelle est la date de sortie du premier film de Star Wars?", "reponses": ["1975", "1977", "1980", "1983"], "correct": "1977"}, {"question": "Qui est l'auteur du livre \"Da Vinci Code\"?", "reponses": ["Dan Brown", "J.K. Rowling", "Stephen King", "George R.R. Martin"], "correct": "Dan Brown"}, {"question": "Quel est le titre du premier album de Britney Spears?", "reponses": ["...Baby One More Time", "Oops!... I Did It Again","Toxic", "Circus"], "correct": "...Baby One More Time"}, {"question": "Quel acteur a joué le rôle de James Bond dans le film \"Skyfall\"?", "reponses": ["Daniel Craig", "Pierce Brosnan", "Sean Connery", "Roger Moore"], "correct": "Daniel Craig"}, {"question": "Qui est le réalisateur de la trilogie du \"Seigneur des Anneaux\"?", "reponses": ["Steven Spielberg", "Tim Burton", "James Cameron", "Peter Jackson"], "correct": "Peter Jackson"}]
+[{"question": "Quelle entreprise a développé le premier microprocesseur commercialisé en 1971 ?", 
+  "reponses": ["Intel", "IBM", "AMD", "Apple"], 
+  "correct": "Intel"},
+ {"question": "Quelle est la signification de l'acronyme HTML ?", 
+  "reponses": ["HyperText Markup Language", "HyperText Media Language", "HyperText Markup Logic", "HyperText Media Logic"], 
+   "correct": "HyperText Markup Language"},
+ {"question": "Quel est le langage de programmation utilisé pour développer des applications Android ?", 
+  "reponses": ["Java", "C++", "Python", "JavaScript"], 
+   "correct": "Java"},
+ {"question": "Qu'est-ce qu'un bot informatique ?", 
+  "reponses": ["Un logiciel malveillant", "Un programme dédié à l'automatisation de tâches", "Un algorithme de recherche", "Un moyen de communication via Internet"], 
+   "correct": "Un programme dédié à l'automatisation de tâches"},
+ {"question": "Qu'est-ce que le terme 'Bitcoin' désigne-t-il ?", 
+  "reponses": ["Un système de paiement en ligne", "Une cryptomonnaie", "Un réseau peer-to-peer", "Un navigateur web"], 
+   "correct": "Une cryptomonnaie"}]
+[  
+   {  
+      "question":"Quelle est la première personne à avoir programmé un ordinateur ?",
+      "reponses":[  
+         "Alan Turing",
+         "Ada Lovelace",
+         "Charles Babbage",
+         "John von Neumann"
+      ],
+      "correct":"Ada Lovelace"
+   },
+   {  
+      "question":"Quelle est la capacité de stockage du premier disque dur commercialisé ?",
+      "reponses":[  
+         "1 Mo",
+         "10 Mo",
+         "100 Mo",
+         "1 Go"
+      ],
+      "correct":"5 Mo"
+   },
+   {  
+      "question":"Quel est le principal différenciateur du format de fichier DOCX par rapport au format DOC ?",
+      "reponses":[  
+         "La compatibilité avec les versions antérieures de Microsoft Word",
+         "La compression des données",
+         "La possibilité d'ajouter des macros",
+         "L'utilisation d'XML pour le stockage des données"
+      ],
+      "correct":"L'utilisation d'XML pour le stockage des données"
+   },
+   {  
+      "question":"Qu'est-ce que le terme 'hackathon' désigne généralement ?",
+      "reponses":[  
+         "Un marathon de hacking informatique",
+         "Une compétition de jeux vidéo en ligne",
+         "Un concours de développement de logiciels",
+         "Une conférence sur la cybersécurité"
+      ],
+      "correct":"Un concours de développement de logiciels"
+   },
+   {  
+      "question":"Qu'est-ce que le langage de programmation Python ?",
+      "reponses":[  
+         "Un langage de programmation orienté objet",
+         "Un langage de programmation fonctionnel",
+         "Un langage de programmation impératif",
+         "Un langage de script interprété"
+      ],
+      "correct":"Un langage de script interprété"
+   }
+]
