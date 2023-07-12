@@ -13,7 +13,7 @@ Il permet également de faire du prompt engineering, un processus essentiel pour
 `$ git clone https://github.com/TheAsouka/poc_culturegpt.git`  
 `$ cd poc_culturegpt`
 
-2. Installer les dépendances:
+2. Installer les dépendances:  
 `$ pip install -r requirements.txt`
 
 ## Utilisation
@@ -22,7 +22,7 @@ Il permet également de faire du prompt engineering, un processus essentiel pour
 `OPENAI_API_KEY="sk-..."`
 
 2. Lancez l'application avec Streamlit :  
-`streamlit run src/main.py`  
+`$ streamlit run src/main.py`  
 Vous pouvez maintenant naviguer dans l'application via le navigateur web.
 
 3. Utiliser sans API :  
