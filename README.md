@@ -4,12 +4,12 @@ CultureGPT est une application web qui génère des quiz de culture générale s
 
 ## Objectif du projet
 
-Ce projet est un POC permettant de se familiariser avec [Streamlit] (https://docs.streamlit.io/) et la bibliothèque [openai] (https://github.com/openai/openai-python) pour l'interraction avec un modèle d'IA.
+Ce projet est un POC permettant de se familiariser avec [Streamlit](https://docs.streamlit.io/) et la bibliothèque [openai](https://github.com/openai/openai-python) pour l'interraction avec un modèle d'IA.
 Il permet également de faire du prompt engineering, un processus essentiel pour diriger et affiner les performances du modèle IA. Cela implique la conception créative de prompts pour guider le modèle d'IA à produire les réponses souhaitées.
 
 ## Installation
 
-1. Cloner le dépôt :
+1. Cloner le dépôt :  
 `$ git clone https://github.com/TheAsouka/poc_culturegpt.git`  
 `$ cd poc_culturegpt`
 
@@ -18,14 +18,14 @@ Il permet également de faire du prompt engineering, un processus essentiel pour
 
 ## Utilisation
 
-1. Créez un fichier .env à la racine du projet avec votre clé [API OpenAI] (https://platform.openai.com/account/api-keys) :
+1. Créez un fichier .env à la racine du projet avec votre clé [API OpenAI](https://platform.openai.com/account/api-keys) :  
 `OPENAI_API_KEY="sk-..."`
 
-2. Lancez l'application avec Streamlit :
-`streamlit run src/main.py`
+2. Lancez l'application avec Streamlit :  
+`streamlit run src/main.py`  
 Vous pouvez maintenant naviguer dans l'application via le navigateur web.
 
-3. Utiliser sans API :
+3. Utiliser sans API :  
 Une archive de quiz a été crée pour permettre d'essayer l'application sans la connecter à l'API OpenAI.  
 Pour ce faire commenter les lignes **87** à **104**, créer une variable **response** de type **str** avec l'un des quiz (entre `[]`) du fichier **quiz_archive.txt**
 
