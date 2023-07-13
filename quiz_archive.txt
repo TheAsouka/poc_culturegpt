@@ -185,7 +185,7 @@
       "question":"Quelle est la capacité de stockage du premier disque dur commercialisé ?",
       "reponses":[  
          "1 Mo",
-         "10 Mo",
+         "5 Mo",
          "100 Mo",
          "1 Go"
       ],
@@ -221,4 +221,58 @@
       ],
       "correct":"Un langage de script interprété"
    }
+]
+[ 
+  {
+    "question": "Quel pays possède le plus grand nombre de volcans en activité ?",
+    "reponses": ["Japon", "Mexique", "Italie", "Indonésie"],
+    "correct": "Indonésie"
+  },
+  {
+    "question": "Quelle est la capitale de l'Afrique du Sud ?",
+    "reponses": ["Le Cap", "Johannesburg", "Pretoria", "Durban"],
+    "correct": "Pretoria"
+  },
+  {
+    "question": "Quel est le point culminant de l'Amérique du Sud ?",
+    "reponses": ["Mont Aconcagua", "Mont Chimborazo", "Mont Ojos del Salado", "Mont Fitz Roy"],
+    "correct": "Mont Aconcagua"
+  },
+  {
+    "question": "Quel est le plus grand désert du monde ?",
+    "reponses": ["Sahara", "Kalahari", "Gobi", "Antarctique"],
+    "correct": "Antarctique"
+  },
+  {
+    "question": "Quel est le plus grand archipel du monde ?",
+    "reponses": ["Philippines", "Indonésie", "Maldives", "Polynésie Française"],
+    "correct": "Indonésie"
+  }
+]
+[ 
+  {
+    "question": "Quel artiste a peint la Joconde ?",
+    "reponses": ["Leonard de Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"],
+    "correct": "Leonard de Vinci"
+  },
+  {
+    "question": "Quel est le courant artistique de l'artiste Salvador Dali ?",
+    "reponses": ["Cubisme", "Surréalisme", "Impressionnisme", "Pop Art"],
+    "correct": "Surréalisme"
+  },
+  {
+    "question": "Quelle est la couleur complémentaire du bleu ?",
+    "reponses": ["Jaune", "Rouge", "Vert", "Orange"],
+    "correct": "Orange"
+  },
+  {
+    "question": "Qui a sculpté la statue de David ?",
+    "reponses": ["Auguste Rodin", "Michel-Ange", "Auguste Renoir", "Pierre-Auguste Renoir"],
+    "correct": "Michel-Ange"
+  },
+  {
+    "question": "Quel est le plus grand musée d'art au monde ?",
+    "reponses": ["Musée du Louvre", "Museum of Modern Art (MoMA)", "Hermitage Museum", "Musée d'Orsay"],
+    "correct": "Musée du Louvre"
+  }
 ]

@@ -22,29 +22,30 @@ Il permet également de faire du prompt engineering, un processus essentiel pour
 `OPENAI_API_KEY="sk-..."`
 
 2. Lancez l'application avec Streamlit :  
-`$ streamlit run src/main.py`  
+`$ streamlit run src/app.py`  
 Vous pouvez maintenant naviguer dans l'application via le navigateur web.
 
 3. Utiliser sans API :  
 Une archive de quiz a été crée pour permettre d'essayer l'application sans la connecter à l'API OpenAI.  
-Pour ce faire commenter les lignes **87** à **104**, créer une variable **response** de type **str** avec l'un des quiz (entre `[]`) du fichier **quiz_archive.txt**
+Pour ce faire commenter les lignes **93** à **110**, créer une variable **response** de type **str** avec l'un des quiz (entre `[]`) du fichier **quiz_archive.txt**
 
 ## Fonctionnement
 L'application utilise la technologie GPT-3.5 pour générer des questions et réponses basées sur le thème et la difficulté choisie par l'utilisateur. Les questions sont générées sous forme de QCM (Question à Choix Multiples). Une fois que l'utilisateur a terminé le quiz, le score est calculé et affiché.
 En moyenne pour un quiz de 5 questions un total de 500 tokens est utilisé.
-Le prompt utilise **164** tokens.
+Le prompt utilise **163** tokens.
 
 ## Améliorations possibles
 
-1. **Interface utilisateur** : L'interface utilisateur pourrait être améliorée pour être plus conviviale et attrayante. Une fonctionnalité permettant
-2. **Gestion des erreurs** : Une meilleure gestion des erreurs pourrait être mise en place pour s'assurer que l'application continue de fonctionner même si une erreur se produit lors de la génération du quiz.
-3. **Historique des quiz** : Une fonctionnalité pourrait être ajoutée pour permettre à l'utilisateur de consulter ses quiz précédents et leurs scores respectifs.
-4. **Support multilingue** : L'application pourrait être améliorée pour supporter plusieurs langues.
-5. **Système de paiement** : Pour un déploiement en production, intégrer un système de micro-paiement en cryptomonnaire pour que l'utilisateur participe au coût de génération du quiz.
+1. **Prompt** : Améliorer le prompt pour répondre aux erreurs eventuelles.
+2. **Interface utilisateur** : L'interface utilisateur pourrait être améliorée pour être plus conviviale et attrayante. Donner également la possibilité à l'utilisateur de soumettre son propre thème (attention aux attaques type prompt injection)  
+3. **Gestion des erreurs** : Une meilleure gestion des erreurs pourrait être mise en place pour s'assurer que l'application continue de fonctionner même si une erreur se produit lors de la génération du quiz.
+4. **Historique des quiz** : Une fonctionnalité pourrait être ajoutée pour permettre à l'utilisateur de consulter ses quiz précédents et leurs scores respectifs.
+5. **Support multilingue** : L'application pourrait être améliorée pour supporter plusieurs langues.
+6. **Système de paiement** : Intégrer un système de micro-paiement (en cryptomonnaies évidemment) pour que l'utilisateur participe au coût de génération du quiz.
 
 ## Limites
 Une limitation notable est la redondance des questions générées par le modèle d'IA. 
-Il est possible que les utilisateurs rencontrent des questions similaires ou même identiques lors de l'accomplissement de plusieurs quiz.
+Il est possible que les utilisateurs rencontrent des questions similaires ou même identiques lors de l'accomplissement de plusieurs quiz. Attention il est aussi propable que les réponses aux questions ne soient pas exactes. (ex : "Quel est le plus grand désert du monde ?" "Antarctique"...)
 
 ## Image
 <img src="https://github.com/TheAsouka/poc_culturegpt/blob/main/img/capture.png">  
