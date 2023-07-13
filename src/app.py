@@ -5,7 +5,6 @@
 import streamlit as st
 import openai, os, json
 from dotenv import load_dotenv
-from collections import namedtuple
 
 
 def load_env():
@@ -147,7 +146,7 @@ def run_app():
 
     st.title("CultureGPT")
     theme, difficulty = render_select()
-
+    st.warning("Attention ça coute des sous (0.001$/quiz).")
     if st.button("Générer le quiz"):
         try:
             quiz = generate_quiz(theme, difficulty)
