@@ -32,7 +32,9 @@ Pour ce faire commenter les lignes **93** à **110**, créer une variable **resp
 ## Fonctionnement
 L'application utilise la technologie GPT-3.5 pour générer des questions et réponses basées sur le thème et la difficulté choisie par l'utilisateur. Les questions sont générées sous forme de QCM (Question à Choix Multiples). Une fois que l'utilisateur a terminé le quiz, le score est calculé et affiché.
 En moyenne pour un quiz de 5 questions un total de 500 tokens est utilisé.
-Le prompt utilise **163** tokens.
+Le prompt utilise **163** tokens.  
+Le cout de génération d'un quiz est approximativement de :  
+```((0.0015/1000)*163) + ((0.002/1000)*350) = 0.0009445$``
 
 ## Améliorations possibles
 
