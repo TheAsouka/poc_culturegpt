@@ -159,8 +159,8 @@ def run_app():
             st.error(f"An error occurred: {str(e)}")
 
     # Retourne la valeur de "FormSubmitter:my_form-Confirmer" dans st.session_state si elle existe, sinon retourne False.
-    # Puisque la valeur existe déjà (False), attend qu'elle soit a True.
-    # Permet d'attendre que l'utilisateur clique sur "Confirmer" dans le formulaire
+    # Si la variable passe a True (clique sur "Confirmer") cette portion de code est executée
+    # Le résultat du quiz est généré depuis le session_state
     if st.session_state.get("FormSubmitter:my_form-Confirmer", False):
         try:
             render_quiz_results(st.session_state.quiz)
